@@ -3,12 +3,19 @@
   "name": "Run script automatically",
   "description": "",
   "version": "1.0",
+  "action": {
+    "default_title": "Click Me",
+    "default_popup": "src/action/default/popup.html"
+  },
   "content_scripts": [
     {
       "js": [
-        "out/content-script.js"
+        "out/content/content-script.js"
       ],
       "matches": ["<all_urls>"]
     }
-  ]
+  ],
+  "background": {
+    "service_worker": "out/background/main.js"
+  }
 }
