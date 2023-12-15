@@ -4,8 +4,7 @@
   "description": "",
   "version": "1.0",
   "action": {
-    "default_title": "Click Me",
-    "default_popup": "src/action/default/popup.html"
+    "default_title": "Click Me"
   },
   "content_scripts": [
     {
@@ -13,6 +12,10 @@
         "out/content/content-script.js"
       ],
       "matches": ["<all_urls>"]
+    },
+    {
+      "js": ["out/content/keep.js"],
+      "matches": ["https://keep.google.com/**"]
     }
   ],
   "background": {
