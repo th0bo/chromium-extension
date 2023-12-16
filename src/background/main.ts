@@ -21,13 +21,24 @@ console.log("service worker script start");
 //   })();
 // });
 
+let itemList: string[] = [];
+
 chrome.action.onClicked.addListener((tab) => {
-  console.log("tost");
   if (tab.id !== undefined) {
-    const message: MyItemMessage = {
-      id: "item",
-      content: ["raisin", "avoine"],
-    };
-    chrome.tabs.sendMessage(tab.id, message);
+    if (itemList.length === 0) {
+      itemList = ["cacao", "quinoa"];
+      console.log(itemList);
+    } else {
+      try {
+        const message: MyItemMessage = {
+          id: "item",
+          content: itemList,
+        };
+        console.log(message);
+        chrome.tabs.sendMessage(tab.id, message);
+      } catch(e) {
+        console.error(e);
+      }
+    }
   }
 });
