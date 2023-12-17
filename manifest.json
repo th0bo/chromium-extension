@@ -16,6 +16,11 @@
     {
       "js": ["out/content/keep.js"],
       "matches": ["https://keep.google.com/**"]
+    },
+    {
+      "js": ["out/content/inbox.js"],
+      "css": ["style/content/inbox.css"],
+      "matches": ["https://mail.google.com/**"]
     }
   ],
   "background": {
