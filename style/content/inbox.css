@@ -3,4 +3,7 @@
     background-color: black !important;
     color: white !important;
   }
+  iframe[title="Tasks"], iframe[title="Keep"] {
+    filter: invert(1);
+  }
 }
