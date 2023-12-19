@@ -21,6 +21,10 @@
       "js": ["out/content/inbox.js"],
       "css": ["style/content/inbox.css"],
       "matches": ["https://mail.google.com/**"]
+    },
+    {
+      "css": ["style/content/messenger.css"],
+      "matches": ["https://www.messenger.com/**", "https://drive.google.com/**"]
     }
   ],
   "background": {
